@@ -17,7 +17,7 @@
 %% under the License.
 %%
 %%% -*- mode:erlang -*-
-{application, thrift,
+{application, casbench,
  [
   % A quick description of the application.
   {description, "Thrift bindings"},

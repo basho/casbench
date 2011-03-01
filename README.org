@@ -1,0 +1,60 @@
+* casbench
+** Overview
+=casbench= is a utility library for [[https://github.com/basho/basho_bench][Basho Bench]] that provides an
+interface to [[https://cassandra.apache.org/][Cassandra]] via [[https://incubator.apache.org/thrift/download/][Thrift]]. This library works with Cassandra 0.5.1.
+
+** Quick Start
+=casbench= is used as part of Basho Bench. You will need to setup
+Basho Bench and Cassandra 0.5.1.
+
+1) Download and extract [[https://archive.apache.org/dist/cassandra/0.5.1/][Cassandra 0.5.1]]
+2) Update the various configuration paths as needed
+#+BEGIN_SRC shell
+conf/log4j.properties:log4j.appender.R.File=/var/log/cassandra/system.log
+conf/storage-conf.xml:  <CommitLogDirectory>/var/lib/cassandra/commitlog</CommitLogDirectory>
+conf/storage-conf.xml:      <DataFileDirectory>/var/lib/cassandra/data</DataFileDirectory>
+conf/storage-conf.xml:  <CalloutLocation>/var/lib/cassandra/callouts</CalloutLocation>
+conf/storage-conf.xml: <StagingFileDirectory>/var/lib/cassandra/staging</StagingFileDirectory>
+#+END_SRC
+3) Start Cassandra
+#+BEGIN_SRC shell
+./bin/cassandra
+#+END_SRC
+4) Download and build Basho Bench
+#+BEGIN_SRC shell
+git clone git://github.com:basho/basho_bench.git
+cd basho_bench
+make
+#+END_SRC
+5) Run Basho Bench with the example casbench.config file
+#+BEGIN_SRC shell
+./basho_bench examples/casbench.config
+#+END_SRC
+
+For more information on using Basho Bench checkout the [[https://wiki.basho.com/Benchmarking-with-Basho-Bench.html][Basho Wiki]].
+
+** Contributing
+   We encourage contributions to =casbench= from the community.
+
+   1) Fork the =casbench= repository on [[https://github.com/basho/casbench][Github]].
+   2) Clone your fork or add the remote if you already have a clone of
+      the repository.
+#+BEGIN_SRC shell
+git clone git@github.com:yourusername/casbench.git
+# or
+git remote add mine git@github.com:yourusername/casbench.git
+#+END_SRC
+   3) Create a topic branch for your change.
+#+BEGIN_SRC shell
+git checkout -b some-topic-branch
+#+END_SRC
+   4) Make your change and commit. Use a clear and descriptive commit
+      message, spanning multiple lines if detailed explanation is
+      needed.
+   5) Push to your fork of the repository and then send a pull-request
+      through Github.
+#+BEGIN_SRC shell
+git push mine some-topic-branch
+#+END_SRC
+   6) A Basho engineer or community maintainer will review your patch
+      and merge it into the main repository or send you feedback.

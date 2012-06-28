@@ -1,5 +1,8 @@
 * casbench
 ** Overview
+
+[[http://travis-ci.org/basho/casbench][Travis-CI]] :: [[https://secure.travis-ci.org/basho/casbench.png]]
+
 =casbench= is a utility library for [[https://github.com/basho/basho_bench][Basho Bench]] that provides an
 interface to [[https://cassandra.apache.org/][Cassandra]] via [[https://incubator.apache.org/thrift/download/][Thrift]]. This library works with Cassandra 0.5.1.
 

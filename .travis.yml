@@ -1,4 +1,5 @@
 language: erlang
+script: ./rebar compile eunit
 notifications:
   email: eng@basho.com
 otp_release:

@@ -1,7 +1,7 @@
 language: erlang
 script: ./rebar compile eunit
 notifications:
-  webhooks: http://basho-engbot.herokuapp.com/?key=86b76229c9757e641e7bfd9cccc7e86c9b567c78
+  webhooks: http://basho-engbot.herokuapp.com/travis?key=86b76229c9757e641e7bfd9cccc7e86c9b567c78
   email: eng@basho.com
 otp_release:
   - R15B01

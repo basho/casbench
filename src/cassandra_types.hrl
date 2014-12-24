@@ -109,10 +109,10 @@
 
 %% struct 'ColumnPath'
 
--record('columnPath', {'column_family' :: string() | binary(),
+-record('ColumnPath', {'column_family' :: string() | binary(),
                        'super_column' :: string() | binary(),
                        'column' :: string() | binary()}).
--type 'columnPath'() :: #'columnPath'{}.
+-type 'ColumnPath'() :: #'ColumnPath'{}.
 
 %% struct 'SliceRange'
 

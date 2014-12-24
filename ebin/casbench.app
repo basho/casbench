@@ -45,6 +45,11 @@
              thrift_socket_server,
              thrift_socket_transport,
              thrift_transport,
+             thrift_client_util,
+             thrift_json_parser,
+             thrift_json_protocol,
+             thrift_reconnecting_client,
+             thrift_transport_state_test,
              cassandra_thrift,
              cassandra_types
    ]},
